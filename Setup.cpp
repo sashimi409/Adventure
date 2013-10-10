@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 #include "Room.h"
 #include "Items.h"
 
@@ -107,14 +108,14 @@ void intro()
 	cout << "There is something in here that was left for you." <<endl;
 	cout << "Your goal is to find it." << endl;
 	cout << "You will have to navigate and interact with your enviorment" << endl;
-	cout << "I wish you the best of luck love." << endl;
+	cout << "I wish you the best of luck." << endl;
 	cout << "-Salim" << endl;
 	cout << "---------------------------------------------------" << endl;
 }
 void setup(vector<Room>& Rooms,vector<Item>& Items)
 {
 	string Emily;
-	Emily = "Dear Emily,\nI am sorry this has taken so long. Even though it took me so long it is very very short. Even though I am giving this to you now I would like to make it a little more elaborate before I am done. I wanted to give this to you now becuase we are gonna be apart for a little while. That is ok, its not for long and we can handle it. We will still be in touch the whole time and texting a lot probably :P. I just wanted you to have this as something to remind you of me. and I get to say things like, I love you more than anything else in the whole world, but in a secretive way. I am glad I put the time into making this, becuase I enjoyed it. Sorry if it took time away from us. :( anyway, I love you babe. *kiss*\n-Salim" ;
+	Emily = "You figured it out!";
 	Room Kitchen("Kitchen");
 	Room Dining("Dining Room");
 	Kitchen.set_info("You are in a room with granite countertops and cabinets along the walls. In places there are appliances; a fridge, stove, and oven. Obviously it is a kitchen.There are many cooking implements and a key on the counter. There is a doorway, through which you can see what looks like the corner of a table");

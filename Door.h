@@ -1,6 +1,8 @@
 #ifndef DOOR_H
 #define DOOR_H
+#include <string>
 #include "Room.h"
+
 
 using namespace std;
 
@@ -8,10 +10,10 @@ using namespace std;
 class Door
 {
 	public:
-		Item(string, Room*);
+		Door(string, Room*);
 		void get_name();
 	private:
-		Room* destinaiton;
+		Room* destination;
 		string Name;
 
 };

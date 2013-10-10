@@ -29,7 +29,7 @@ class Room
 		vector<Item*> Items;
 		vector<Item*> Objects;
 	private:
-		const string name;
+		string name;
 		string Enter;
 		string info;
 		vector<Room*> Doors;

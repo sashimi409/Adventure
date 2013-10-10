@@ -1,4 +1,7 @@
-#inclde <vector>
+#include <vector>
+#include <string>
+#include <iostream>
+#include "Items.h"
 
 Item::Item(string name,string String = "",string desc = "", string make = "", string make_interact =  "",string make_description = "", bool needs = false, string needs_what = ""):
 	Name(name),

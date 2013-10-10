@@ -1,4 +1,6 @@
+#include <string>
 #include "Room.h"
+#include "Door.h"
 
 Door::Door(string name, Room* To):
 	Name(name),
@@ -8,4 +10,4 @@ Door::Door(string name, Room* To):
 void Door::get_name()
 {
 	cout << "My name is " << Name << ".\n";
-}
+};
