@@ -1,7 +1,7 @@
 all: Adventure
 
 Adventure: Main.o Setup.o Items.o Door.o Room.o
-	g++ Main.o Setup.o -o Adventure
+	g++ Main.o Setup.o Room.o Door.o Items.o -o Adventure
 
 Main.o: Main.cpp Items.h Room.h Setup.h
 	g++ -c Main.cpp
