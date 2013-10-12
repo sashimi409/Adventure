@@ -1,6 +1,6 @@
 #include <string>
-#include "Room.h"
-#include "Door.h"
+#include "../Header/Room.h"
+#include "../Header/Door.h"
 
 Door::Door(string name, Room* To):
 	Name(name),

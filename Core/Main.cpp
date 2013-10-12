@@ -1,9 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Items.h"
-#include "Room.h"
-#include "Setup.h"
+#include "../Header/Items.h"
+#include "../Header/Room.h"
+#include "../Header/Setup.h"
 
 
 

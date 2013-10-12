@@ -1,7 +1,7 @@
 #include <vector>
 #include <string>
-#include "Room.h"
-#include "Items.h"
+#include "../Header/Room.h"
+#include "../Header/Items.h"
 
 void Make_doors(vector<Room>& Rooms, string rm1, string rm2)
 {

@@ -3,20 +3,20 @@ all: Adventure
 Adventure: Main.o Setup.o Items.o Door.o Room.o
 	g++ Main.o Setup.o Room.o Door.o Items.o -o Adventure
 
-Main.o: Main.cpp Items.h Room.h Setup.h
-	g++ -c Main.cpp
+Main.o: Core/Main.cpp Header/Items.h Header/Room.h Header/Setup.h
+	g++ -c Core/Main.cpp
 
-Setup.o: Setup.cpp Room.h Items.h
-	g++ -c Setup.cpp
+Setup.o: Core/Setup.cpp Header/Room.h Header/Items.h
+	g++ -c Core/Setup.cpp
 
-Items.o: Items.cpp 
-	g++ -c Items.cpp
+Items.o: Core/Items.cpp 
+	g++ -c Core/Items.cpp
 
-Door.o: Door.cpp Room.h
-	g++ -c Door.cpp
+Door.o: Core/Door.cpp Header/Room.h
+	g++ -c Core/Door.cpp
 
-Room.o: Room.cpp Door.h Items.h
-	g++ -c Room.cpp
+Room.o: Core/Room.cpp Header/Door.h Header/Items.h
+	g++ -c Core/Room.cpp
 
 clean:
-	rm -rf *o Adventure
+	rm -rf *.o Adventure
