@@ -34,14 +34,11 @@ bool Room :: list_doors()
 	int index = 0;
 	if(Doors.size() > 0)
 	{
-		vector<Room*>::iterator Door;
-		for(Door = Doors.begin(); Door != Doors.end();++Door)
+		vector<Door>::iterator Passage;
+		for(Passage = Doors.begin(); Passage != Doors.end();++Passage)
 		{
-			Room* To;
-			To = *Door;
-		
-			
-			cout << index << " - " << To -> get_name() << endl;
+						
+			cout << index << " - " << Passage->Name << endl;
 			++index;
 		}
 		return true;
@@ -59,7 +56,7 @@ void Room :: add_Item(Item* thing)
 	Items.push_back(thing);
 };
 
-void Room :: add_door(Room* room)
+void Room :: add_door(Door room)
 {
 	Doors.push_back(room);
 };
@@ -84,9 +81,9 @@ string Room::Enterance()
 	return Enter;
 }
 
-Room* Room::Get_door(int Choice)
+int Room::Get_door(int Choice)
 {
-	return Doors[Choice];
+	return Doors[Choice].Destination;
 }
 
 void Room::take_item(int Choice)

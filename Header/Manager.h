@@ -18,9 +18,11 @@ class Manager
 public:
 
 	//Called to change Current location
-	void Move(int);
 	Manager();
+	void Move(int);
 	void AddRoom(Room*);
+	int FindDoor(int);
+	Room* get_current() { return Current; };
 
 private:
 
