@@ -6,7 +6,7 @@ This project is a pet project to push my skills and get more experience as a dev
 
 ## Currently working on: 
  - Decoupling the framework from the "story"
- - This includes adding in a file storage system
+ - This also involves restructuring the code
 
 
 ## Next up:
