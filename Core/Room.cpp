@@ -1,5 +1,5 @@
 #include <vector>
-#include "../Header/Door.h"
+#include "../Header/Room.h"
 #include "../Header/Items.h"
 Room :: Room(string name):
 	name(name)

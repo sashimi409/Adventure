@@ -4,6 +4,7 @@
 #include "../Header/Items.h"
 #include "../Header/Room.h"
 #include "../Header/Setup.h"
+#include "../Header/Manager.h"
 
 
 
@@ -19,6 +20,7 @@ using namespace std;
 
 int main()
 {
+
 	vector<Room> Rooms;
 	vector<Item> Items;
 	Items.reserve(10);

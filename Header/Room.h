@@ -13,6 +13,14 @@ using namespace std;
 class Room 
 {
 
+
+	//Defining a nested class of door
+	class Door
+	{
+		string Name;
+		int Destination;
+	};
+
 	public:
 		Room(string);
 		bool list_Items();
