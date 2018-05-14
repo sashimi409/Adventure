@@ -26,6 +26,7 @@ class Room
 		string get_info();
 		string Enterance();
 		Room* Get_door(int);
+		int GetID() { return ID; }
 		vector<Item*> Items;
 		vector<Item*> Objects;
 	private:
@@ -33,6 +34,7 @@ class Room
 		string Enter;
 		string info;
 		vector<Room*> Doors;
+		int ID;
 
 
 };
