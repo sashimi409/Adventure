@@ -9,7 +9,6 @@
 
 int get_input();
 void help();
-string info(Room Place);
 int choice;
 bool list_inventory(vector<Item*>&);
 using namespace std;
@@ -18,14 +17,22 @@ using namespace std;
 
 int main()
 {
+	//Instantiate The manager class
 	Manager WorldState;
+
+	//Create a test room
 	Room Menu("Menu");
 	Menu.set_info("This is a test object");
 	Menu.set_ID(3);
+
+	//Initial set up of the Manager object
 	WorldState.AddRoom(&Menu);
 	WorldState.Move(3);
-	Room* current = WorldState.get_current();	
-	cout << info(*current) << endl;
+	Room* current = WorldState.get_current();
+
+
+	//Game Loop
+	cout << current->get_info() << endl;
 	help();
 	do
 	{
@@ -47,10 +54,10 @@ int main()
 				cin >> choiceWhere;
 				int Dest = WorldState.FindDoor(choiceWhere);
 				WorldState.Move(Dest);
-				cout <<info(*current) << endl;
+				cout << current ->get_info() << endl;
 			}
 			break;
-		case 2:cout << info(*current) << endl;
+		case 2:cout << current->get_info() << endl;
 			break;
 		case 9: cout << "Goodbye" << endl;
 			break;
@@ -66,7 +73,9 @@ int main()
 	return 0;
 }
 
-
+/*Function to list items on the characters person
+Currently not available to be used
+*/
 bool list_inventory(vector<Item*>& Inventory)
 {
 	int index = 0;
@@ -87,6 +96,9 @@ bool list_inventory(vector<Item*>& Inventory)
 	else{ cout << "Nothing" << endl; return false;};
 }
 
+/*
+Displays the commands to interact with the world state
+*/
 void help()
 {
 	cout << "Commands:" <<endl;
@@ -96,16 +108,13 @@ void help()
 	cout << "9 - Quit" << endl;
 }
 
+/* Gathers input from the player based on the commands found in the help section
+*/
 int get_input()
 {
 	cout << ">";
 	cin >> choice;
 
 	return choice;
-}
-
-string info(Room Place)
-{
-	return Place.get_info();
 }
 

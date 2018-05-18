@@ -31,16 +31,14 @@ class Room
 		void set_info(string);
 		void take_item(int);
 		void set_ID(int id) { ID = id; };
-		string get_name();
-		string get_info();
-		string Enterance();
+		string get_name() { return name;  };
+		string get_info() { return info; };
 		int Get_door(int);
 		int GetID() { return ID; }
 		vector<Item*> Items;
 		vector<Item*> Objects;
 	private:
 		string name;
-		string Enter;
 		string info;
 		vector<Door> Doors;
 		int ID;

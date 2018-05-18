@@ -1,11 +1,12 @@
 #include <vector>
 #include "../Header/Room.h"
 #include "../Header/Items.h"
+
+
 Room :: Room(string name):
 	name(name)
 {
 	vector<Item*> Objects;
-	vector<Room*> Doors;
 
 };
 
@@ -61,25 +62,12 @@ void Room :: add_door(Door room)
 	Doors.push_back(room);
 };
 
-string Room::get_name()
-{
-	return name;
-};
-
-string Room::get_info()
-{
-	return info;
-};
 
 void Room::set_info(string Info)
 {
 	info = Info;
 }
 
-string Room::Enterance()
-{
-	return Enter;
-}
 
 int Room::Get_door(int Choice)
 {

@@ -16,9 +16,10 @@ Will handle my world State
 class Manager 
 {
 public:
-
-	//Called to change Current location
+	
 	Manager();
+	
+//Called to change Current location
 	void Move(int);
 	void AddRoom(Room*);
 	int FindDoor(int);
