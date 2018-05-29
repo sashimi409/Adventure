@@ -4,10 +4,10 @@
 #include "../Header/Items.h"
 #include "../Header/Room.h"
 #include "../Header/Manager.h"
+#include "../Header/Input.h"
 
 
 
-int get_input();
 void help();
 int choice;
 bool list_inventory(vector<Item*>&);
@@ -34,7 +34,9 @@ int main()
 	//Game Loop
 	cout << current->get_info() << endl;
 	help();
-	do
+	bool Running = true;
+
+	while(Running)
 	{
 		choice = get_input();
 		cout << endl;
@@ -44,7 +46,9 @@ int main()
 		case 0:
 			help();
 			break;
-		case 1: cout << "Where would you like to move?" << endl;
+
+		case 1: 
+			cout << "Where would you like to move?" << endl;
 			bool Dr;
 			Dr = current -> list_doors();
 			if(Dr)
@@ -54,21 +58,28 @@ int main()
 				cin >> choiceWhere;
 				int Dest = WorldState.FindDoor(choiceWhere);
 				WorldState.Move(Dest);
-				cout << current ->get_info() << endl;
+				Room* current = WorldState.get_current();
+				cout << current->get_info() << endl;
 			}
 			break;
-		case 2:cout << current->get_info() << endl;
+
+		case 2:
+			cout << current->get_info() << endl;
 			break;
-		case 9: cout << "Goodbye" << endl;
+
+		case 9: 
+			cout << "Goodbye" << endl;
+			Running = false;
 			break;
-		default: cout << "That is not a valid input" << endl;
+
+		//Should never be called. get_input should never return an invalid choice
+		default: cout << "There was an error, please change your input" << endl;
 			break;
+
 		}
 		cout << endl;
-		Room* current = WorldState.get_current();
+		
 	}
-	while(choice != 9);
-
 
 	return 0;
 }
@@ -108,13 +119,5 @@ void help()
 	cout << "9 - Quit" << endl;
 }
 
-/* Gathers input from the player based on the commands found in the help section
-*/
-int get_input()
-{
-	cout << ">";
-	cin >> choice;
 
-	return choice;
-}
 
