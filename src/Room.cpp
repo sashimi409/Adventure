@@ -1,6 +1,6 @@
 #include <vector>
-#include "../Header/Room.h"
-#include "../Header/Items.h"
+#include "../include/Room.h"
+#include "../include/Items.h"
 
 
 Room :: Room(string name):

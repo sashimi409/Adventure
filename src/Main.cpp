@@ -1,10 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "../Header/Items.h"
-#include "../Header/Room.h"
-#include "../Header/Manager.h"
-#include "../Header/Input.h"
+#include "../include/Items.h"
+#include "../include/Room.h"
+#include "../include/Manager.h"
+#include "../include/Input.h"
 
 
 
