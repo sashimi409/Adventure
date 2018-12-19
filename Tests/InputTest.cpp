@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include "gtest/gtest.h"
-#include "../src/Input.cpp"
+#include "../src/CPPs/Input.cpp"
 
 
 //Dummy test to make sure gtest is working for now

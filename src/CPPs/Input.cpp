@@ -7,11 +7,16 @@ using namespace std;
 
 /* Gathers input from the player and validates the data
 */
-int get_input()
+int get_input(string question = "")
 {
 	int choice; //final input to be passed back
 	string Input; //initial input
-	regex Pattern("^[0123456789]*$") ; // to verify input is an int
+	regex Pattern("^[0123456789]*$"); // to verify input is an int
+
+	//send question if need be
+	if (question != "") {
+	cout << question << endl;
+	}
 
 
 	//get input
